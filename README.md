@@ -84,3 +84,19 @@ Contributions are always welcome! If you have suggestions for improving the scri
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## If Python version is older try this fix
+### Add this import at the top:
+```bash
+from typing import Tuple
+```
+
+### Replace this
+```bash
+def get_video_url(page_content: str, verbose: bool) -> tuple[str, str]:
+```
+to 
+```bash
+def get_video_url(page_content: str, verbose: bool) -> Tuple[str, str]:
+```
+
